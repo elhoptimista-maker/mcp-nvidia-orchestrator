@@ -22,8 +22,8 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": "./dist/index.js",
-    "./orchestrator": "./dist/orchestrator.js",
-    "./config": "./dist/config.js"
+    "./orchestrator": "./dist/src/orchestrator.js",
+    "./config": "./dist/src/config.js"
   },
   "scripts": {
     "build": "tsc",
