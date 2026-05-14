@@ -1,0 +1,20 @@
+# Smithery configuration for NVIDIA MCP Orchestrator
+version: 1
+package:
+  name: mcp-nvidia-orchestrator
+  description: A multi-model consensus and synthesis engine for NVIDIA NIM models.
+  author: Esteban Iturra <esteba.iturra.c@gmail.com>
+  license: MIT
+  homepage: https://github.com/elhoptimista-maker/mcp-nvidia-orchestrator
+
+server:
+  name: NVIDIA MCP Orchestrator
+  type: stdio
+  command: npx
+  args:
+    - -y
+    - mcp-nvidia-orchestrator
+  env:
+    NVIDIA_API_KEY:
+      description: Your NVIDIA API key from build.nvidia.com
+      required: true
