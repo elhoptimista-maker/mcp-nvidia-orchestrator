@@ -1,0 +1,47 @@
+{
+  "name": "mcp-nvidia-orchestrator",
+  "version": "1.1.0",
+  "description": "NVIDIA NIM Expert Orchestrator with MCP support. A multi-model consensus and synthesis engine.",
+  "author": "Esteban Iturra <esteba.iturra.c@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "nvidia",
+    "nim",
+    "ai",
+    "orchestrator",
+    "llama3",
+    "multi-model",
+    "consensus"
+  ],
+  "bin": {
+    "mcp-nvidia-orchestrator": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./orchestrator": "./dist/orchestrator.js",
+    "./config": "./dist/config.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx index.ts",
+    "test": "tsx tests/test-production.ts",
+    "prepare": "npm run build"
+  },
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "dotenv": "^17.4.2",
+    "openai": "^6.37.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.7.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  }
+}
